@@ -1,0 +1,9 @@
+body{
+    background: "D:/quiz-app Front-End/quiz-app/src/background.jpg";
+}
+
+center{
+    margin-top: 200px;
+    font-size: 50px;
+    color: rgb(108, 162, 233);
+}
