@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Import 'Routes' instead of 'Switch'
-import QuestionList from "./AccountList";
+import AccountList from "./AccountList";
 import NavBar from "./NavBar";
-import AddQuestion from "./AddQuestion";
+import AddUser from "./AddUser";
 import Home from "./Home";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -28,10 +28,10 @@ const AppRouter = () => {
 				<Route path="/" element={<Login onLogin={handleLogin} />} />
 				<Route path="/home" element={<Home />} />
 				{/* Use 'Routes' instead of 'Switch' */}
-				<Route path="/questionlist" element={<QuestionList />} />
-				<Route path="/addquestion" element={<AddQuestion />} />
+				<Route path="/accountlist" element={<AccountList />} />
+				<Route path="/addUser" element={<AddUser />} />
 				<Route path="/createquiz" element={<CreateQuiz />} />
-				<Route path="/loanlist" element={<LoanList/>} />
+				<Route path="/loanlist" element={<LoanList />} />
 				<Route path="/userList" element={<UserList />} />
 				<Route path="/dashboard" element={<Dashboard />} />
 			</Routes>

@@ -8,13 +8,16 @@ const NavBar = ({ loggedInUser }) => {
 		<nav>
 			<ul>
 				<li>
-					<Link to="/questionlist">Account List</Link>
+					<Link to="/userlist">User List</Link>
+				</li>
+				<li>
+					<Link to="/addUser"> Add User</Link>
+				</li>
+				<li>
+					<Link to="/accountlist">Account List</Link>
 				</li>
 				<li>
 					<Link to="/loanlist">Loan List</Link>
-				</li>
-				<li>
-					<Link to="/userlist">User List</Link>
 				</li>
 			</ul>
 		</nav>
