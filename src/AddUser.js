@@ -6,7 +6,7 @@ import "./AddUser.css";
 
 function AddUser() {
 	const [name, setName] = useState("");
-	const [status, setStatus] = useState("");
+	const [status, setStatus] = useState("Active");
 	const [cnic, setCnic] = useState("");
 
 	const handleSubmit = (event) => {
@@ -21,6 +21,7 @@ function AddUser() {
 				pauseOnHover: true,
 				draggable: true,
 			});
+			return 
 		}
 		handleAddUser();
 	};
