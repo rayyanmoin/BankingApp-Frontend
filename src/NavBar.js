@@ -17,7 +17,13 @@ const NavBar = ({ loggedInUser }) => {
 					<Link to="/accountlist">Account List</Link>
 				</li>
 				<li>
+					<Link to="/addAccount">Add Account</Link>
+				</li>
+				<li>
 					<Link to="/loanlist">Loan List</Link>
+				</li>
+				<li>
+					<Link to="/addLoan">Add Loan</Link>
 				</li>
 			</ul>
 		</nav>

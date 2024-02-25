@@ -6,12 +6,14 @@ import AddUser from "./AddUser";
 import Home from "./Home";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import CreateQuiz from "./CreateQuiz";
+import CreateQuiz from "./AddLoan";
 import LoanList from "./LoanList";
 import UserList from "./UserList";
 import Dashboard from "./Dashboard";
 import Login from "./Login";
 import Register from "./Register";
+import AddAccount from "./AddAccount";
+import AddLoan from "./AddLoan";
 
 const AppRouter = () => {
 	const [loggedInUser, setLoggedInUser] = useState(null);
@@ -29,8 +31,11 @@ const AppRouter = () => {
 				<Route path="/home" element={<Home />} />
 				{/* Use 'Routes' instead of 'Switch' */}
 				<Route path="/accountlist" element={<AccountList />} />
+
+				<Route path="/addAccount" element={<AddAccount />} />
+
 				<Route path="/addUser" element={<AddUser />} />
-				<Route path="/createquiz" element={<CreateQuiz />} />
+				<Route path="/addLoan" element={<AddLoan />} />
 				<Route path="/loanlist" element={<LoanList />} />
 				<Route path="/userList" element={<UserList />} />
 				<Route path="/dashboard" element={<Dashboard />} />
