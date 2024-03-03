@@ -3,7 +3,7 @@ import "./Home.css";
 const Home = () => {
   return (
 		<div>
-			<center>WELCOME TO QUIZ APPLICATION</center>
+			<center>WELCOME TO MEEZAN BANK</center>
 		</div>
 	);
 }

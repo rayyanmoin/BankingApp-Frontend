@@ -39,7 +39,7 @@
   }
   
   button {
-    background-color: #4caf50;
+    background-color: rgb(114, 18, 114);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -50,6 +50,6 @@
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: #a045a0;
   }
   
