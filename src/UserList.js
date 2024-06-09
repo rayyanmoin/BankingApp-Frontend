@@ -25,15 +25,21 @@ const UserList = () => {
 	}, []);
 
 	const columnDefs = [
-		{ headerName: "Id", field: "id", width: 150 },
+		{ headerName: "Id", field: "id", width: 75 },
 		{
 			headerName: "Name",
 			field: "name",
-			width: 250,
-			filter:"NameFilter"
+			width: 100,
+			filter: "NameFilter",
 		},
-		{ headerName: "Status", field: "status", width: 150, filter: "StatusFilter" },
-		{ headerName: "CNIC", field: "cnic", width: 150, filter: "UserFilter" },
+
+		{ headerName: "CNIC", field: "cnic", width: 120, filter: "UserFilter" },
+		{ headerName: "Father Name", field: "fatherName", width: 150 },
+		{ headerName: "Phone No", field: "phoneNo", width: 120 },
+		{ headerName: "Profession", field: "profession", width: 150 },
+		{ headerName: "Age", field: "age", width: 75 },
+		{ headerName: "Gender", field: "gender", width: 100 },
+		{ headerName: "Status", field: "status", width: 100, filter: "StatusFilter" },
 	];
 
 	return (
