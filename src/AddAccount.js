@@ -1,18 +1,30 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function AddAccount() {
-  const [userId, setUserId] = useState('');
-  const [balance, setBalance] = useState('');
-  const [pin, setPin] = useState("");
+	const [userId, setUserId] = useState("");
+	const [balance, setBalance] = useState("");
+	const [pin, setPin] = useState("");
+	const [users, setUsers] = useState([]);
+
+	useEffect(() => {
+		axios
+			.get("http://localhost:8080/api/usersForDropdown")
+			.then((response) => {
+				setUsers(response.data);
+			})
+			.catch((error) => {
+				console.error("There was an error fetching the users!", error);
+			});
+	}, []);
 
 	const handleSubmit = (event) => {
 		event.preventDefault(); // Prevent default form submission behavior
 		// Check if form fields are not empty
 		if (!userId || !balance || !pin) {
-			toast.warning("User ID , Balance and Pin are required!", {
+			toast.warning("User , Balance and Pin are required!", {
 				position: "top-right",
 				autoClose: 3000,
 				hideProgressBar: false,
@@ -65,8 +77,15 @@ function AddAccount() {
 		<div className="modal-content">
 			<h1>Add Account</h1>
 			<form onSubmit={handleSubmit}>
-				<label>User ID:</label>
-				<input type="text" value={userId} onChange={(e) => setUserId(e.target.value)} />
+				<label>User:</label>
+				<select value={userId} onChange={(e) => setUserId(e.target.value)}>
+					<option value="">Select User</option>
+					{users.map((user) => (
+						<option key={user.id} value={user.id}>
+							{user.username}
+						</option>
+					))}
+				</select>
 				<br />
 				<label>Balance:</label>
 				<input type="text" value={balance} onChange={(e) => setBalance(e.target.value)} />
