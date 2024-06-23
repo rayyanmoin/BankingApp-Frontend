@@ -14,6 +14,8 @@ import AddAccount from "./AddAccount";
 import AddLoan from "./AddLoan";
 import DepositMoney from "./DepositMoney";
 import WithdrawMoney from "./WithdrawMoney";
+import CustomerHelp from "./CustomerHelp";
+import AddCustomerHelp from "./AddCustomerHelp";
 
 const AppRouter = () => {
 	const [loggedInUser, setLoggedInUser] = useState(null);
@@ -36,7 +38,9 @@ const AppRouter = () => {
 				<Route path="/loanlist" element={<LoanList />} />
 				<Route path="/userList" element={<UserList />} />
 				<Route path="/depositMoney" element={<DepositMoney />} />
-				<Route path="/withdrawMoney" element={<WithdrawMoney/>} />
+				<Route path="/withdrawMoney" element={<WithdrawMoney />} />
+				<Route path="/customerHelp" element={<CustomerHelp />} />
+				<Route path="/addCustomerHelp" element={<AddCustomerHelp />} />
 				<Route path="/dashboard" element={<Dashboard />} />
 			</Routes>
 		</Router>

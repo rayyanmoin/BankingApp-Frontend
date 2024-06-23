@@ -31,6 +31,12 @@ const NavBar = ({ loggedInUser }) => {
 				<li>
 					<Link to="/withdrawMoney">Withdraw Money</Link>
 				</li>
+				<li>
+					<Link to="/customerHelp">Customer Help List</Link>
+				</li>
+				<li>
+					<Link to="/AddCustomerHelp">Add Customer Help</Link>
+				</li>
 			</ul>
 		</nav>
 	);
